@@ -1,0 +1,7 @@
+{
+  "name": "BeautyMac",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

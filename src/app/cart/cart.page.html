@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>My cart</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/home">
+        <ion-icon name="home"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <app-cart-item *ngFor="let item od cartItems" [item]="item" (remove)="removeFromCart(item.id)"></app-cart-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="simulatePayment()">Pay</ion-button>
+  <ion-button expand="full" color="danger" (click)="clearCart()">Empty cart</ion-button>
+</ion-content>
